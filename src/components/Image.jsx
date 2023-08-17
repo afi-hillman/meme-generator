@@ -13,7 +13,7 @@ const Image = ({
     <div>
       <div className="max-w-full max-h-full bg-white flex rounded-md">
         <div
-          className="bg-gray-300 w-[400px] h-[400px] max-w-[700px] max-h-[700px] m-4 text-white"
+          className="bg-gray-300 w-[400px] h-[400px] max-w-[700px] max-h-[700px] m-4 p-2 text-white"
           style={{
             backgroundImage: `url(${randomMeme})`,
             backgroundSize: "cover",

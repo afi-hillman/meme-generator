@@ -67,7 +67,9 @@ const Generator = () => {
           className="flex flex-col justify-between items-start w-full h-full p-4 gap-4 bg-white"
           // onSubmit={handleSubmit(onSubmit)}
         >
-          <label htmlFor="firstText">Text 1</label>
+          <label htmlFor="firstText" style={{ fontSize: "20px" }}>
+            Text 1
+          </label>
           <input
             type="text"
             placeholder="Insert text 1"
@@ -77,7 +79,9 @@ const Generator = () => {
           {errors.firstName && (
             <span className="text-sm text-red-500">Field is required</span>
           )}
-          <label htmlFor="secondText">Text 2</label>
+          <label htmlFor="secondText" style={{ fontSize: "20px" }}>
+            Text 2
+          </label>
           <input
             type="text"
             placeholder="Insert text 2"
@@ -87,7 +91,9 @@ const Generator = () => {
           {errors.firstName && (
             <span className="text-sm text-red-500">Field is required</span>
           )}
-          <label htmlFor="textPosition">Text position</label>
+          <label htmlFor="textPosition" style={{ fontSize: "20px" }}>
+            Text Position
+          </label>
           <select
             className="border block w-full p-2 rounded-md"
             {...register("textPosition")}
@@ -100,22 +106,24 @@ const Generator = () => {
           {errors.firstName && (
             <span className="text-sm text-red-500">Field is required</span>
           )}
-          <button
-            onClick={() => {
-              toggleShowtext();
-            }}
-            type="button"
-            className="w-full h-[40px] bg-red-600 hover:bg-red-600/70 transition-all text-white rounded-md"
-          >
-            Insert text to image ➡
-          </button>
-          <button
-            onClick={handleSubmit(onSubmit)}
-            type="button"
-            className="w-full h-[40px] bg-red-600 text-white rounded-md hover:bg-red-600/70 transition-all"
-          >
-            Get a new meme image 🖼
-          </button>
+          <div className="flex flex-col w-full gap-2">
+            <button
+              onClick={handleSubmit(onSubmit)}
+              type="button"
+              className="w-full h-[40px] bg-red-600 text-white rounded-md hover:bg-red-600/70 transition-all"
+            >
+              Generate meme! 🖼
+            </button>
+            <button
+              onClick={() => {
+                toggleShowtext();
+              }}
+              type="button"
+              className="w-full h-[40px] bg-red-600 hover:bg-red-600/70 transition-all text-white rounded-md"
+            >
+              Insert text to image ➡
+            </button>
+          </div>
         </form>
       </div>
       <Image
