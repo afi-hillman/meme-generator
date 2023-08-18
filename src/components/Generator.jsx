@@ -76,9 +76,6 @@ const Generator = () => {
             className="border block w-full p-2 rounded-md"
             {...register("firstText")}
           />
-          {errors.firstName && (
-            <span className="text-sm text-red-500">Field is required</span>
-          )}
           <label htmlFor="secondText" style={{ fontSize: "20px" }}>
             Text 2
           </label>
@@ -88,9 +85,6 @@ const Generator = () => {
             className="border block w-full p-2 rounded-md"
             {...register("secondText")}
           />
-          {errors.firstName && (
-            <span className="text-sm text-red-500">Field is required</span>
-          )}
           <label htmlFor="textPosition" style={{ fontSize: "20px" }}>
             Text Position
           </label>
@@ -103,13 +97,9 @@ const Generator = () => {
             <option value="column">top-to-bottom</option>
             <option value="row">left-to-right</option>
           </select>
-          {errors.firstName && (
-            <span className="text-sm text-red-500">Field is required</span>
-          )}
           <div className="flex flex-col w-full gap-2">
             <button
               onClick={handleSubmit(onSubmit)}
-              type="button"
               className="w-full h-[40px] bg-red-600 text-white rounded-md hover:bg-red-600/70 transition-all"
             >
               Generate meme! 🖼
