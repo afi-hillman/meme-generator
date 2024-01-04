@@ -33,6 +33,8 @@ const Generator = () => {
   //   console.log(watch("secondText"));
   //   console.log(watch("textPosition"));
 
+  // test
+
   const toggleTextPosition = () => {
     setTextPosition(textPosition === "row" ? "column" : "row");
   };
